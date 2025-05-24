@@ -24,3 +24,5 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 echo "Documentation build succeeded!"
+
+julia -e 'using LiveServer; serve(dir="docs/build")'
